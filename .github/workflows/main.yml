@@ -1,0 +1,16 @@
+name: TESTING
+
+on:
+  workflow_dispatch:
+    inputs:
+      ffmpegcom:
+        description: 'Command ffmpeg'
+        required: true
+
+jobs:
+  live-streaming:
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: live stream
+        run: ${{ github.event.inputs.ffmpegcom }}
