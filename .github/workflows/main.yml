@@ -1,4 +1,4 @@
-name: TESTING
+name: FFMPEG
 
 on:
   workflow_dispatch:
@@ -12,5 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-        - name: live stream
+      - name: install ffmpeg
+        run: ls
+      - name: live stream
         run: ${{ github.event.inputs.ffmpegcom }}
