@@ -13,6 +13,6 @@ jobs:
 
     steps:
       - name: install ffmpeg
-        run: ls
+        run: sudo apt install ffmpeg -y
       - name: live stream
         run: ${{ github.event.inputs.ffmpegcom }}
